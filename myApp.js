@@ -16,7 +16,7 @@ req.time=new Date().toString();
  res.send({time:req.time})
 })
 app.get("/name",function(req,res){
-res.send({name:`${req.query.first} ${req.query.last}`})
+res.send({name:`${req.body.first} ${req.body.last}`})
 })
 app.get("/json",function(req,res){
  if (process.env.MESSAGE_STYLE=="uppercase"){
