@@ -15,7 +15,7 @@ req.time=new Date().toString();
 },function(req,res){
  res.send({time:req.time})
 })
-app.get("/name",function(req,res){
+app.post("/name",function(req,res){
 res.send({name:`${req.body.first} ${req.body.last}`})
 })
 app.get("/json",function(req,res){
