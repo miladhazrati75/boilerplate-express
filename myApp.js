@@ -1,11 +1,9 @@
 var express = require('express');
 var app = express();
 console.log("Hello World");
-app.get("/",function(req,res,next){
+app.use(function(req,res,next){
 console.log(`${req.method} ${req.path} - ${req.ip}`);
  next();
-},function(req,res){
-res.send("ok")
 })
 app.use("/public",express.static(__dirname+"/public"));
 app.get("/json",function(req,res){
