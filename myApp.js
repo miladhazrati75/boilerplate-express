@@ -13,8 +13,8 @@ req.time=new Date().toString();
 },function(req,res){
  res.send({time:req.time})
 })
-app.get("/:word/echo",function(req,res){
-res.send({echo:req.params.word})
+app.get("/name",function(req,res){
+res.send({name:`${req.query.first} ${req.query.last}`})
 })
 app.get("/json",function(req,res){
  if (process.env.MESSAGE_STYLE=="uppercase"){
